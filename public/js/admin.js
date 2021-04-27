@@ -35,7 +35,7 @@ function call(id) {
     user_id: connection.user_id,
   };
 
-  socket.emit('admin_list_socket_by_user', params, (messages) => {
+  socket.emit('admin_list_messages_by_user', params, (messages) => {
     const divMessages = document.getElementById(
       `allMessages${connection.user_id}`
     );

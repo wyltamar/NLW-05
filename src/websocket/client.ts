@@ -28,7 +28,7 @@ io.on('connect', (socket) => {
         user_id: user.id,
       });
 
-      user_id = user_id;
+      user_id = user.id;
     } else {
       user_id = userExists.id;
       const connection = await connectionsService.findByUserId(userExists.id);

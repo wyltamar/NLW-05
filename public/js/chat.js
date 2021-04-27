@@ -27,8 +27,8 @@ document.querySelector('#start_chat').addEventListener('click', (event) => {
     });
 
     socket.on('client_list_all_messages', (messages) => {
-      //prettier-ignore
-      var template_client = document.getElementById('message-user-template').innerHTML;
+      var template_client = document.getElementById('message-user-template')
+        .innerHTML;
 
       var template_admin = document.getElementById('admin-template').innerHTML;
 

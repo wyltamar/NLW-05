@@ -38,12 +38,12 @@ class ConnectionsService {
   }
 
   async findAllWithoutAdmin() {
-    const connection = await this.connectionsRepository.find({
+    const connections = await this.connectionsRepository.find({
       where: { admin_id: null },
       relations: ['user'],
     });
 
-    return connection;
+    return connections;
   }
 
   async findBySocketID(socket_id: string) {
